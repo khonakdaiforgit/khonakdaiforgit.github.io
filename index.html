@@ -3,161 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammad Hossein Khonakdari's Profile - Senior .Net Developer</title>
+    <title>Mohammad Hossein Khonakdari - Senior .NET Developer</title>
     <meta name="google-site-verification" content="ua5C8jaHw91OR3mntPOICjhn4kCFg5y7HLtRFRVEucc" />
-    <!-- Meta Description for SEO -->
     <meta name="description" content="Mohammad Hossein Khonakdari, a Senior .Net Developer">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
-        /* Custom font */
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* Light gray background */
-        }
-        /* Custom scrollbar for a cleaner look */
-        ::-webkit-scrollbar {
-            width: 8px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            line-height: 1.7;
         }
 
-        ::-webkit-scrollbar-track {
-            background: #e0e0e0;
-            border-radius: 10px;
+        h1, h2, h3, h4, h5 {
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 10px;
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border: 6px solid #000;
+            object-fit: cover;
         }
 
-            ::-webkit-scrollbar-thumb:hover {
-                background: #555;
+        .section-title {
+            border-bottom: 4px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 24px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .skill-tag {
+            background: #000;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        a {
+            color: #000;
+            text-decoration: underline;
+        }
+
+            a:hover {
+                opacity: 0.7;
             }
     </style>
 </head>
-<body class="text-gray-800">
-    <div class="container mx-auto p-4 md:p-8">
-        <!-- Header Section -->
-        <header class="bg-white shadow-lg rounded-xl p-6 mb-8 text-center">
-            <div class="flex flex-col items-center">
-                <img src="Images/ProfilePhoto.jpg" alt="Mohammad Hossein Khonakdari Profile Image" class="w-32 h-32 rounded-full object-cover border-4 border-blue-500 mb-4">
-                <h1 class="text-4xl font-bold text-blue-700 mb-2">Mohammad Hossein Khonakdari</h1>
-                <p class="text-xl text-gray-600">Senior .Net Developer</p>
-            </div>
+<body class="bg-white text-black">
+
+    <div class="container py-5">
+        <!-- Header -->
+        <header class="text-center mb-5 pb-5 border-bottom border-5 border-black">
+            <img src="Images/ProfilePhoto.jpg" alt="Mohammad Hossein Khonakdari" class="rounded-circle profile-img mb-4">
+            <h1 class="display-4 fw-bold">Mohammad Hossein Khonakdari</h1>
+            <p class="lead fw-bold">Senior .NET Developer</p>
+            <p class="fs-5">I am a .Net developer with 10 years of experience, mostly self-employed.</p>
         </header>
 
-        <main class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <!-- Left Column: Summary, Information, Skills, Awards -->
-            <div class="lg:col-span-1 space-y-8">
-                <!-- Summary Section -->
-                <section class="bg-white shadow-lg rounded-xl p-6">
-                    <h2 class="text-2xl font-semibold text-blue-600 mb-4 border-b-2 border-blue-200 pb-2">Summary</h2>
-                    <p class="text-gray-700 leading-relaxed">
-                        I am a .Net developer with 10 years of experience, mostly self-employed.
-                    </p>
-                </section>
+        <div class="row g-5">
+            <!-- Left Column -->
+            <div class="col-lg-4">
 
-                <!-- Information Section -->
-                <section class="bg-white shadow-lg rounded-xl p-6">
-                    <h2 class="text-2xl font-semibold text-blue-600 mb-4 border-b-2 border-blue-200 pb-2">Information</h2>
-                    <ul class="space-y-3 text-gray-700">
-                        <li><strong class="text-blue-500">Location:</strong> IRAN, Babolsar</li>
-                        <li><strong class="text-blue-500">Email:</strong> khonakdaridev@gmail.com</li>
-                        <li><strong class="text-blue-500">Date of birth:</strong> May 1993</li>
-                        <li><strong class="text-blue-500">Education:</strong> Bachelor Software Engineer</li>
-                        <li>
-                            <strong class="text-blue-500">Github:</strong>
-                            <a href="https://github.com/khonakdaiforgit" target="_blank" class="text-blue-600 hover:underline">khonakdaiforgit</a>
-                        </li>
-                        <li>
-                            <strong class="text-blue-500">Telegram:</strong>
-                            <a href="https://t.me/Khonakdari_tel" target="_blank" class="text-blue-600 hover:underline">Khonakdari_tel</a>
-                        </li>
-
+                <!-- Information -->
+                <section class="mb-5">
+                    <h2 class="section-title">Information</h2>
+                    <ul class="list-unstyled fs-5">
+                        <li><strong>Location:</strong> IRAN, Babolsar</li>
+                        <li><strong>Email:</strong> khonakdaridev@gmail.com</li>
+                        <li><strong>Date of birth:</strong> May 1993</li>
+                        <li><strong>Education:</strong> Bachelor Software Engineer</li>
+                        <li><strong>Github:</strong> <a href="https://github.com/khonakdaiforgit" target="_blank">khonakdaiforgit</a></li>
+                        <li><strong>Telegram:</strong> <a href="https://t.me/Khonakdari_tel" target="_blank">Khonakdari_tel</a></li>
                     </ul>
                 </section>
 
-                <!-- Skills Section -->
-                <section class="bg-white shadow-lg rounded-xl p-6">
-                    <h2 class="text-2xl font-semibold text-blue-600 mb-4 border-b-2 border-blue-200 pb-2">Skills</h2>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">C#</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Winform</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">WPF</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">ASP.NET MVC & .NET Core</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Dependency injection</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">REST</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">SOAP</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">.NET Core Api & JWT</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Entity Framework</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Dapper & Log4Net</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">SQL Server & TSQL & SP & Job</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">StimulSoft & Microsoft Report & Active Report</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">QuestPDF</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Onion architecture</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">MongoDB & RealmDB (mobile database) & Postgres</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Docker & Redis</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">WCF Service</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">GitHub</span>
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Familiar with OOP & SOLID</span>
+                <!-- Skills -->
+                <section class="mb-5">
+                    <h2 class="section-title">Skills</h2>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">Winform</span>
+                        <span class="skill-tag">WPF</span>
+                        <span class="skill-tag">ASP.NET MVC & .NET Core</span>
+                        <span class="skill-tag">Dependency injection</span>
+                        <span class="skill-tag">REST</span>
+                        <span class="skill-tag">SOAP</span>
+                        <span class="skill-tag">.NET Core Api & JWT</span>
+                        <span class="skill-tag">Entity Framework</span>
+                        <span class="skill-tag">Dapper & Log4Net</span>
+                        <span class="skill-tag">SQL Server & TSQL & SP & Job</span>
+                        <span class="skill-tag">StimulSoft & Microsoft Report & Active Report</span>
+                        <span class="skill-tag">QuestPDF</span>
+                        <span class="skill-tag">Onion architecture</span>
+                        <span class="skill-tag">MongoDB & RealmDB (mobile database) & Postgres</span>
+                        <span class="skill-tag">Docker & Redis</span>
+                        <span class="skill-tag">WCF Service</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Familiar with OOP & SOLID</span>
                     </div>
                 </section>
 
-                <!-- Awards Section -->
-                <section class="bg-white shadow-lg rounded-xl p-6">
-                    <h2 class="text-2xl font-semibold text-blue-600 mb-4 border-b-2 border-blue-200 pb-2">Awards</h2>
-                    <ul class="list-disc list-inside text-gray-700 space-y-2">
-                        <li>
-                            <strong class="text-blue-500">2013-2015:</strong> 🥈 Silver medal Iran 2014 tournament WorldSkills (IT Software Solutions For Business)
-                        </li>
-                    </ul>
+                <!-- Awards -->
+                <section class="mb-5">
+                    <h2 class="section-title">Awards</h2>
+                    <p class="fw-bold">2013-2015: 🥈 Silver medal Iran 2014 tournament WorldSkills (IT Software Solutions For Business)</p>
                 </section>
+
             </div>
 
-            <!-- Right Column: Work Experience, Projects -->
-            <div class="lg:col-span-2 space-y-8">
-                <!-- Work Experience Section -->
-                <section class="bg-white shadow-lg rounded-xl p-6">
-                    <h2 class="text-2xl font-semibold text-blue-600 mb-4 border-b-2 border-blue-200 pb-2">Work Experience</h2>
-                    <!-- Self-Employed -->
-                    <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
-                        <h3 class="text-xl font-medium text-gray-900">.Net Web Developer & Game Developer</h3>
-                        <p class="text-blue-500">Company: Self-Employed</p>
-                        <p class="text-gray-600 text-sm mb-2">2019-NOW</p>
-                        <p class="text-gray-700 mb-2">
-                            Technologies: C#, MVC.Net Core, EF Core, SQL, MongoDB, Github, Unity 2D
-                        </p>
-                        <ul class="list-disc list-inside text-gray-700 space-y-1">
-                            <li>Projects: Language Schools Web Application, InstaData Web Application, MyNetLink Web Application, PerfectShop Web Application, 2D Games, Hideln Windows & Web Application</li>
-                        </ul>
+            <!-- Right Column -->
+            <div class="col-lg-8">
+
+                <!-- Work Experience -->
+                <section class="mb-5">
+                    <h2 class="section-title">Work Experience</h2>
+
+                    <div class="mb-5">
+                        <h4 class="fw-bold">.Net Web Developer & Game Developer</h4>
+                        <p class="text-muted">Company: Self-Employed • 2019-NOW</p>
+                        <p>Technologies: C#, MVC .Net Core, EF Core, SQL, MongoDB, Github, Unity 2D</p>
+                        <small>Projects: Language Schools Web Application, InstaData Web Application, MyNetLink Web Application, PerfectShop Web Application, 2D Games, Hideln Windows & Web Application</small>
                     </div>
 
-                    <!-- Caspian Niavaran -->
-                    <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
-                        <h3 class="text-xl font-medium text-gray-900">.Net Web Developer</h3>
-                        <p class="text-blue-500">Company: Caspian Niavaran</p>
-                        <p class="text-600 text-sm mb-2">2024-2024</p>
-                        <p class="text-gray-700 mb-2">
-                            Technologies: C#, MVC.Net Core, EF Core, SQL, QuestPDF, MongoDB, Github
-                        </p>
-                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <div class="mb-5">
+                        <h4 class="fw-bold">.Net Web Developer</h4>
+                        <p class="text-muted">Company: Caspian Niavaran • 2024-2024</p>
+                        <p>Technologies: C#, MVC .Net Core, EF Core, SQL, QuestPDF, MongoDB, Github</p>
+                        <ul>
                             <li>Office automation system (Automation)</li>
                             <li>Logging for monitoring and troubleshooting</li>
                             <li>Task Management System, Official Letters Module with QuestPDF, Speech to text for letter, File management system and sharing for employee</li>
                         </ul>
                     </div>
 
-                    <!-- SaminRay -->
-                    <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
-                        <h3 class="text-xl font-medium text-gray-900">.Net Developer</h3>
-                        <p class="text-blue-500">Company: SaminRay</p>
-                        <p class="text-gray-600 text-sm mb-2">2017-2019</p>
-                        <p class="text-gray-700 mb-2">
-                            Technologies: C#, Winform, TSQL, Reporting, WCF, MongoDB
-                        </p>
-                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                    <div class="mb-5">
+                        <h4 class="fw-bold">.Net Developer</h4>
+                        <p class="text-muted">Company: SaminRay • 2017-2019</p>
+                        <p>Technologies: C#, Winform, TSQL, Reporting, WCF, MongoDB</p>
+                        <ul>
                             <li>Developed MVC Persian Date-picker with event</li>
                             <li>Developed Banking Core backend and UI, optimizing TSQL queries, created log storage service for backend and client</li>
                             <li>Developed Fixed asset windows App backend and UI</li>
@@ -166,80 +159,55 @@
                     </div>
                 </section>
 
-                <!-- Projects Section -->
-                <section class="bg-white shadow-lg rounded-xl p-6">
-                    <h2 class="text-2xl font-semibold text-blue-600 mb-4 border-b-2 border-blue-200 pb-2">Projects</h2>
+                <!-- Projects -->
+                <section>
+                    <h2 class="section-title">Projects</h2>
 
-                    <!-- Language Schools Web Application -->
-                    <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
-                        <h3 class="text-xl font-medium text-gray-900">1. Language Schools Web Application</h3>
-                        <p class="text-gray-700 mb-2">A management system for language learners with various roles (Administrator, Teacher, and Student).</p>
-                        <p class="text-gray-700 mb-2">
-                            Technologies: ASP.NET MVC, Entity Framework, SQL Server, Bootstrap, jQuery
-                        </p>
-                        <p class="text-gray-700">
-                            Achievements: Developed a multi-access web application and optimized grading and reporting processes.
-                        </p>
+                    <div class="mb-4">
+                        <h5 class="fw-bold">1. Language Schools Web Application</h5>
+                        <p>A management system for language learners with various roles (Administrator, Teacher, and Student).</p>
+                        <p>Technologies: ASP.NET MVC, Entity Framework, SQL Server, Bootstrap, jQuery</p>
+                        <p>Achievements: Developed a multi-access web application and optimized grading and reporting processes.</p>
                     </div>
 
-                    <!-- InstaData Web Application -->
-                    <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
-                        <h3 class="text-xl font-medium text-gray-900">2. InstaData Web Application</h3>
-                        <p class="text-gray-700 mb-2">A tool for retrieving Instagram data and converting it into downloadable files.</p>
-                        <p class="text-gray-700 mb-2">
-                            Technologies: .NET Core MVC, MongoDB, Docker
-                        </p>
-                        <p class="text-gray-700">
-                            Achievements: Implemented web scraping capabilities and enabled the sale of information as downloadable files.
-                        </p>
+                    <div class="mb-4">
+                        <h5 class="fw-bold">2. InstaData Web Application</h5>
+                        <p>A tool for retrieving Instagram data and converting it into downloadable files.</p>
+                        <p>Technologies: .NET Core MVC, MongoDB, Docker</p>
+                        <p>Achievements: Implemented web scraping capabilities and enabled the sale of information as downloadable files.</p>
                     </div>
 
-                    <!-- PerfectShop Web Application -->
-                    <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
-                        <h3 class="text-xl font-medium text-gray-900">3. PerfectShop Web Application</h3>
-                        <p class="text-gray-700 mb-2">A platform for selling digital files.</p>
-                        <p class="text-gray-700 mb-2">
-                            Technologies: .NET Core MVC, Onion Architecture, MongoDB
-                        </p>
-                        <p class="text-gray-700">
-                            Achievements: Implemented professional architectural patterns, user roles, and a payment gateway.
-                        </p>
+                    <div class="mb-4">
+                        <h5 class="fw-bold">3. PerfectShop Web Application</h5>
+                        <p>A platform for selling digital files.</p>
+                        <p>Technologies: .NET Core MVC, Onion Architecture, MongoDB</p>
+                        <p>Achievements: Implemented professional architectural patterns, user roles, and a payment gateway.</p>
                     </div>
 
-                    <!-- Hideln Windows & Web Application -->
-                    <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
-                        <h3 class="text-xl font-medium text-gray-900">4. Hideln Windows & Web Application</h3>
-                        <p class="text-gray-700 mb-2">A tool for hiding files within other files, with a product key sale feature.</p>
-                        <p class="text-gray-700 mb-2">
-                            Technologies: .NET Windows Application, .NET Core MVC, MongoDB
-                        </p>
-                        <p class="text-gray-700">
-                            Achievements: Storage and Retrieval in Binary format and Encryption file.
-                        </p>
+                    <div class="mb-4">
+                        <h5 class="fw-bold">4. Hideln Windows & Web Application</h5>
+                        <p>A tool for hiding files within other files, with a product key sale feature.</p>
+                        <p>Technologies: .NET Windows Application, .NET Core MVC, MongoDB</p>
+                        <p>Achievements: Storage and Retrieval in Binary format and Encryption file.</p>
                     </div>
 
-                    <!-- 2D Games -->
-                    <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
-                        <h3 class="text-xl font-medium text-gray-900">5. 2D Games</h3>
-                        <p class="text-gray-700 mb-2">Development of 2D games</p>
-                        <p class="text-gray-700 mb-2">
-                            Technologies: Unity 2D, .NET Core API, JWT, MongoDB
-                        </p>
-                        <p class="text-gray-700 mb-2">
-                            Achievements: Created cross-platform 2D games Unity engine.
-                        </p>
-                        <p class="text-gray-700">
-                            <a href="https://cafebazaar.ir/developer/378601856738?l=en" target="_blank" class="text-blue-600 hover:underline font-medium">View my games on Cafe Bazaar</a>
-                        </p>
+                    <div class="mb-4">
+                        <h5 class="fw-bold">5. 2D Games</h5>
+                        <p>Development of 2D games</p>
+                        <p>Technologies: Unity 2D, .NET Core API, JWT, MongoDB</p>
+                        <p>Achievements: Created cross-platform 2D games Unity engine.</p>
+                        <p><a href="https://cafebazaar.ir/developer/378601856738?l=en" target="_blank">View my games on Cafe Bazaar →</a></p>
                     </div>
                 </section>
-            </div>
-        </main>
 
-        <!-- Footer Section -->
-        <footer class="bg-white shadow-lg rounded-xl p-6 mt-8 text-center text-gray-600 text-sm">
-            <p>&copy; 2024 Mohammad Hossein Khonakdari. All rights reserved.</p>
+            </div>
+        </div>
+
+        <footer class="text-center mt-5 py-4 border-top border-4 border-black">
+            <p class="mb-0">© 2024 Mohammad Hossein Khonakdari. All rights reserved.</p>
         </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
