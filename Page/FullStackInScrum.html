@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>راهنمای جامع اسکرام برای توسعه‌دهندگان فول‌استک</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0f172a;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text: #334155;
+            --border: #e2e8f0;
+            --accent: #f1f5f9;
+        }
+
+        body {
+            font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: var(--secondary);
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 12px;
+            font-size: 26px;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            color: var(--primary-dark);
+            font-size: 20px;
+            margin-top: 32px;
+            margin-bottom: 16px;
+            border-right: 4px solid var(--primary);
+            padding-right: 12px;
+        }
+
+        h3 {
+            color: var(--secondary);
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        ul, ol {
+            padding-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .en-term {
+            direction: ltr;
+            unicode-bidi: embed;
+            display: inline-block;
+            font-weight: bold;
+            color: var(--primary-dark);
+            background: var(--accent);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 14px;
+        }
+
+        th, td {
+            border: 1px solid var(--border);
+            padding: 12px 16px;
+            text-align: right;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: var(--accent);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            background-color: #e0e7ff;
+            color: #3730a3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>راهنمای جامع اسکرام (Scrum) برای توسعه‌دهندگان فول‌استک</h1>
+
+        <p>این سند شامل خلاصه‌ای ساده، کاربردی و کامل از مفاهیم اسکرام، نقش‌ها، رویدادها و وظایف روزمره یک توسعه‌دهنده فول‌استک (<span class="en-term">Full-Stack Developer</span>) در یک تیم چابک (<span class="en-term">Agile</span>) است.</p>
+
+        <h2>۱. اسکرام (<span class="en-term">Scrum</span>) چیست؟</h2>
+        <p>اسکرام یک چارچوب مدیریت پروژه چابک (<span class="en-term">Agile Framework</span>) است که پروژه‌های پیچیده را به بازه‌های زمانی کوتاه و مشخص به نام اسپرینت (<span class="en-term">Sprint</span>) تقسیم می‌کند تا خروجی به‌صورت تدریجی، سریع و قابل تست تحویل داده شود.</p>
+
+        <h2>۲. نقش‌های اصلی در اسکرام (<span class="en-term">Scrum Roles</span>)</h2>
+        <ul>
+            <li><b>مالک محصول (<span class="en-term">Product Owner - PO</span>):</b> مسئول تعیین نیازمندی‌ها، اولویت‌بندی بک‌لوگ محصول و تعریف چشم‌انداز ویژگی‌ها.</li>
+            <li><b>اسکرام مستر (<span class="en-term">Scrum Master - SM</span>):</b> تسهیل‌کننده فرآیند اسکرام، رفع‌کننده موانع تیم و اطمینان از اجرای صحیح جلسات.</li>
+            <li><b>تیم توسعه (<span class="en-term">Development Team</span>):</b> گروهی از متخصصان (مانند توسعه‌دهندگان فول‌استک، طراحان UI/UX و تست‌کننده‌ها) که مسئول پیاده‌سازی و تحویل محصول هستند.</li>
+        </ul>
+
+        <h2>۳. جلسات و رویدادهای اسکرام (<span class="en-term">Scrum Events / Ceremonies</span>)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>نام جلسه</th>
+                    <th>اصطلاح انگلیسی</th>
+                    <th>زمان و هدف اصلی</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>برنامه‌ریزی اسپرینت</b></td>
+                    <td><span class="en-term">Sprint Planning</span></td>
+                    <td>در ابتدای اسپرینت؛ انتخاب کارهای اولویت‌دار از بک‌لوگ و متعهد شدن به انجام آن‌ها در اسپرینت جدید.</td>
+                </tr>
+                <tr>
+                    <td><b>جلسه ایستاده روزانه</b></td>
+                    <td><span class="en-term">Daily Standup / Daily Scrum</span></td>
+                    <td>جلسه ۱۵ دقیقه‌ای روزانه؛ پاسخ به ۳ سوال (دیروز چه کردم؟ امروز چه می‌کنم؟ چه مانعی دارم؟).</td>
+                </tr>
+                <tr>
+                    <td><b>بازبینی اسپرینت / دمو</b></td>
+                    <td><span class="en-term">Sprint Review / Demo</span></td>
+                    <td>در انتهای اسپرینت؛ ارائه کارکرد ویژگی‌های تکمیل‌شده به مالک محصول و ذینفعان جهت دریافت بازخورد.</td>
+                </tr>
+                <tr>
+                    <td><b>جلسه بازنگری (رترو)</b></td>
+                    <td><span class="en-term">Sprint Retrospective</span></td>
+                    <td>در انتهای اسپرینت؛ بررسی روند فرآیندی تیم، نقاط قوت، مشکلات همکاری و برنامه‌ریزی برای بهبود در اسپرینت بعدی.</td>
+                </tr>
+                <tr>
+                    <td><b>پایش و پالایش بک‌لوگ</b></td>
+                    <td><span class="en-term">Backlog Refinement / Grooming</span></td>
+                    <td>جلسه میان‌دوره؛ بررسی، شفاف‌سازی و تخمین کارهای اسپرینت‌های آینده با حضور PO و تیم توسعه.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>۴. اصطلاحات و ابزارهای کلیدی (<span class="en-term">Scrum Artifacts & Terms</span>)</h2>
+        <ul>
+            <li><b>بک‌لوگ محصول (<span class="en-term">Product Backlog</span>):</b> لیست کل ویژگی‌ها، باگ‌ها و نیازمندی‌های پروژه که توسط مالک محصول اولویت‌بندی می‌شود.</li>
+            <li><b>بک‌لوگ اسپرینت (<span class="en-term">Sprint Backlog</span>):</b> زیرمجموعه‌ای از کارهای بک‌لوگ محصول که تیم متعهد می‌شود در اسپرینت جاری انجام دهد.</li>
+            <li><b>داستان کاربر (<span class="en-term">User Story</span>):</b> شرح ویژگی محصول از دید کاربر نهایی (مثلاً: به عنوان کاربر می‌خواهم ثبت‌نام کنم تا...).</li>
+            <li><b>تاسک (<span class="en-term">Task</span>):</b> شکست فنی داستان کاربر به کارهای اجرایی (مثلاً ساخت API یا پیاده‌سازی صفحه).</li>
+            <li><b>معیار پذیرش (<span class="en-term">Acceptance Criteria</span>):</b> شرایط و سناریوهایی که مشخص می‌کنند یک داستان کاربر از نظر بزینسی درست کار می‌کند.</li>
+            <li><b>تعریف انجام شدن (<span class="en-term">Definition of Done - DoD</span>):</b> چک‌لیست کیفی تیم (شامل کد زدن، تست، Code Review و Deploy) برای نهایی دانستن یک کار.</li>
+            <li><b>تخمین پیچیدگی (<span class="en-term">Story Point / Estimation</span>):</b> امتیازی برای تعیین حجم و پیچیدگی کارها (معمولاً با روش Planning Poker).</li>
+            <li><b>مانع / چالش (<span class="en-term">Blocker / Impediment</span>):</b> هر مشکلی که مانع پیشرفت کار توسعه‌دهنده شود و باید سریعاً برطرف گردد.</li>
+        </ul>
+
+        <h2>۵. نقشه راه و وظایف روزمره توسعه‌دهنده فول‌استک در اسکرام</h2>
+
+        <h3>الف) در مرحله برنامه‌ریزی و پالایش (<span class="en-term">Planning & Refinement</span>)</h3>
+        <ul>
+            <li><b>شکستن استوری به تاسک‌های فرانت‌اند و بک‌اند:</b> تحلیل استوری و تفکیک آن به مدل دیتابیس، APIهای بک‌اند، و کامپوننت‌های فرانت‌اند.</li>
+            <li><b>ارزیابی فنی و تخمین دقیق:</b> بررسی چالش‌های فنی دیتابیس، سرویس‌های ثالث و پیچیدگی‌های UI/UX جهت ارائه تخمین واقعی.</li>
+        </ul>
+
+        <h3>ب) در طول اسپرینت و توسعه عملیاتی (<span class="en-term">Execution</span>)</h3>
+        <ul>
+            <li><b>مدیریت بورد کارها (<span class="en-term">Jira / Azure DevOps</span>):</b> به‌روزرسانی مداوم وضعیت کارت‌ها (<span class="en-term">To Do &rarr; In Progress &rarr; Code Review &rarr; Done</span>).</li>
+            <li><b>توسعه متوازن بک‌اند و فرانت‌اند:</b> پیاده‌سازی مدل‌ها، Endpointها و اتصال لایه UI به لایه داده طبق اصول کد تمیز (<span class="en-term">Clean Code</span>).</li>
+            <li><b>نوشتن تست و رعایت کیفیت:</b> اجرای تست‌های واحد (<span class="en-term">Unit Test</span>) و تست‌های یکپارچه‌سازی (<span class="en-term">Integration Test</span>).</li>
+            <li><b>بررسی کد همکاران (<span class="en-term">Code Review</span>):</b> بازبینی کشش‌های تغییر (<span class="en-term">Pull Requests</span>) سایر اعضای تیم برای حفظ کیفیت فنی پروژه.</li>
+        </ul>
+
+        <h3>ج) در جلسات هماهنگی و بازخورد (<span class="en-term">Sync & Feedback</span>)</h3>
+        <ul>
+            <li><b>گزارش شفاف در جلسه ایستاده روزانه:</b> بیان دقیق وضعیت پیشرفت، کارهای روز جاری و اعلام شفاف موانع فنی (<span class="en-term">Blockers</span>).</li>
+            <li><b>ارائه دمو (<span class="en-term">Demo</span>):</b> نمایش خروجی قابل لمس به مالک محصول در جلسه Sprint Review.</li>
+            <li><b>مشارکت در بهبود فنی در رترو:</b> مطرح کردن بدهی‌های فنی (<span class="en-term">Technical Debt</span>) و ارائه راهکارهایی برای بهبود معماری یا فرآیند توسعه.</li>
+        </ul>
+    </div>
+
+</body>
+</html>
