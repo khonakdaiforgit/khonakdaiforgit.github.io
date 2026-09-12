@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اصول OOP و SOLID</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --border: #e2e8f0;
+            --accent: #0ea5e9;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, 'Vazirmatn', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid var(--border);
+        }
+
+            header h1 {
+                font-size: 2rem;
+                color: var(--primary-dark);
+                margin-bottom: 0.5rem;
+            }
+
+            header p {
+                color: var(--text-light);
+                font-size: 1.05rem;
+            }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+            .section-title::before {
+                content: "";
+                width: 6px;
+                height: 28px;
+                background: var(--primary);
+                border-radius: 4px;
+            }
+
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+            .card:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+            }
+
+            .card h3 {
+                font-size: 1.15rem;
+                color: var(--primary-dark);
+                margin-bottom: 0.6rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+                .card h3 span {
+                    background: var(--primary);
+                    color: white;
+                    font-size: 0.85rem;
+                    width: 28px;
+                    height: 28px;
+                    border-radius: 50%;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 600;
+                }
+
+            .card p {
+                color: var(--text);
+                font-size: 0.98rem;
+            }
+
+        .solid-letter {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            font-weight: 700;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            text-align: center;
+            line-height: 32px;
+            margin-left: 0.4rem;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1.25rem 0.75rem;
+            }
+
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            .card {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>اصول OOP و SOLID</h1>
+            <p>راهنمای ساده و خوانا برای درک مفاهیم پایه برنامه‌نویسی شیءگرا</p>
+        </header>
+
+        <!-- OOP -->
+        <section>
+            <h2 class="section-title">اصول OOP (برنامه‌نویسی شیءگرا)</h2>
+
+            <div class="card">
+                <h3><span>۱</span> کپسوله‌سازی (Encapsulation)</h3>
+                <p>داده‌ها و متدهایی که روی آن‌ها کار می‌کنند را در یک واحد (کلاس) قرار می‌دهد و دسترسی مستقیم به داده‌ها را محدود می‌کند (معمولاً با private و getter/setter). هدف: محافظت از داده‌ها و کنترل نحوه دسترسی و تغییر آن‌ها.</p>
+            </div>
+
+            <div class="card">
+                <h3><span>۲</span> وراثت (Inheritance)</h3>
+                <p>اجازه می‌دهد یک کلاس ویژگی‌ها و رفتارهای کلاس دیگر را به ارث ببرد. کلاس فرزند می‌تواند متدها و فیلدهای کلاس والد را استفاده یا بازنویسی کند. هدف: استفاده مجدد از کد و ایجاد سلسله‌مراتب.</p>
+            </div>
+
+            <div class="card">
+                <h3><span>۳</span> چندریختی (Polymorphism)</h3>
+                <p>یک رابط یا متد می‌تواند رفتارهای مختلفی داشته باشد بسته به نوع شیء. دو شکل اصلی: Compile-time (Overloading) و Runtime (Overriding). هدف: انعطاف‌پذیری و کار با اشیاء از طریق رابط مشترک.</p>
+            </div>
+
+            <div class="card">
+                <h3><span>۴</span> انتزاع (Abstraction)</h3>
+                <p>جزئیات پیاده‌سازی را پنهان می‌کند و فقط ویژگی‌ها و رفتارهای ضروری را نشان می‌دهد (با abstract class یا interface). هدف: ساده‌سازی پیچیدگی و تمرکز روی «چه کاری انجام می‌شود» نه «چگونه انجام می‌شود».</p>
+            </div>
+        </section>
+
+        <!-- SOLID -->
+        <section>
+            <h2 class="section-title">اصول SOLID</h2>
+
+            <div class="card">
+                <h3><span class="solid-letter">S</span> Single Responsibility Principle</h3>
+                <p><strong>اصل مسئولیت واحد:</strong> هر کلاس باید فقط یک دلیل برای تغییر داشته باشد؛ یعنی فقط یک مسئولیت را بر عهده بگیرد.</p>
+            </div>
+
+            <div class="card">
+                <h3><span class="solid-letter">O</span> Open/Closed Principle</h3>
+                <p><strong>اصل باز/بسته:</strong> نرم‌افزار باید برای گسترش باز باشد، اما برای تغییر بسته. یعنی باید بتوان قابلیت جدید اضافه کرد بدون اینکه کد موجود را تغییر داد (معمولاً با inheritance و polymorphism).</p>
+            </div>
+
+            <div class="card">
+                <h3><span class="solid-letter">L</span> Liskov Substitution Principle</h3>
+                <p><strong>اصل جایگزینی لیسکوف:</strong> اشیاء کلاس فرزند باید بتوانند جایگزین اشیاء کلاس والد شوند بدون اینکه رفتار برنامه خراب شود. کلاس فرزند نباید قرارداد کلاس والد را نقض کند.</p>
+            </div>
+
+            <div class="card">
+                <h3><span class="solid-letter">I</span> Interface Segregation Principle</h3>
+                <p><strong>اصل جداسازی رابط:</strong> کلاینت‌ها نباید مجبور باشند به متدهایی وابسته شوند که از آن‌ها استفاده نمی‌کنند. به جای یک رابط بزرگ، چندین رابط کوچک و تخصصی بسازید.</p>
+            </div>
+
+            <div class="card">
+                <h3><span class="solid-letter">D</span> Dependency Inversion Principle</h3>
+                <p><strong>اصل وارونگی وابستگی:</strong> ماژول‌های سطح بالا نباید به ماژول‌های سطح پایین وابسته باشند. هر دو باید به abstractions (رابط‌ها یا کلاس‌های انتزاعی) وابسته باشند. وابستگی‌ها را معکوس کنید.</p>
+            </div>
+        </section>
+
+        <footer>
+            طراحی شده برای مطالعه آسان و سریع
+        </footer>
+    </div>
+</body>
+</html>
